@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "851MkPOP";
+  src: url("/fonts/851MkPOP_002.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ch";
+  src: url("/fonts/GenJyuuGothic-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "en";
+  src: url("/fonts/DisposableDroidBB_bld.ttf") format("truetype");
+}

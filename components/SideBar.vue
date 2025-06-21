@@ -1,0 +1,259 @@
+<template>
+  <div class="noticeBlock text-center wow animate__rotateInDownRight">
+    <i class="fa-solid fa-circle-exclamation fa-shake" style="color: #ff0000"> 公告</i><br /><span
+      >往下滑可以看到酷酷的tag標籤新功能</span
+    >
+  </div>
+  <div class="profileBlock text-center wow animate__rotateInDownRight">
+    <div class="profile__picture">
+      <img class="rounded-circle" src="https://fs.seaotterms.com/resource/image/ja_icon-milia-sd.png" alt="image" />
+    </div>
+    <h3 style="margin-top: 10px">SeaotterMS</h3>
+    <span>我喜歡吃瓜，跟我講更多瓜瓜!</span>
+    <div class="profile__block2" style="margin-top: 10px; background: rgba(255, 255, 255, 0.5)">
+      <div><a href="#">文章: undefined</a></div>
+      <div><a href="#">哈哈: undefined</a></div>
+    </div>
+    <div class="profile__icon">
+      <a href="https://github.com/peter910820"
+        ><i class="fa-brands fa-github" id="iconGithub" style="margin-right: 10px"></i></a
+      ><a href="https://twitter.com/seaotterMS"
+        ><i class="fa-brands fa-twitter" id="iconTwitter" style="margin-right: 10px"></i></a
+      ><a href="https://www.youtube.com/channel/UCB4v828kadFN4rK37TdWq3g"
+        ><i class="fa-brands fa-youtube" id="iconYoutube"></i
+      ></a>
+    </div>
+  </div>
+  <div class="tagBlock text-center wow animate__rotateInDownRight">
+    <h3 style="margin-top: 10px">
+      TAGs<a href="/tags" style="margin-top: 10px">
+        <h4>TAG總覽</h4>
+      </a>
+    </h3>
+    <div class="tagBlock__content"></div>
+  </div>
+</template>
+
+<style>
+::selection {
+  background-color: yellowgreen;
+  color: white;
+}
+/* Block for body */
+.headingBody {
+  background: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  max-height: 600px;
+}
+.middleBody {
+  margin-top: 5px;
+}
+/* headingBody */
+.headingBody__mainText {
+  color: cornflowerblue;
+  font-weight: bold;
+  margin: 10px;
+}
+/* noticeBlock */
+.noticeBlock {
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 120px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background: rgba(255, 255, 255, 0.75);
+}
+/* profileBlock */
+.profileBlock {
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 400px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background: rgba(255, 255, 255, 0.75);
+}
+/* tagBlock */
+.tagBlock {
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 400px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background: rgba(255, 255, 255, 0.75);
+}
+.tagBlock__content {
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 10px;
+}
+.tagBlock__content a {
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  /* background-color: gold; */
+  display: inline-block;
+  border-radius: 15px;
+  padding: 5px;
+}
+.tagBlock__content a:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+/* profile */
+.profile__picture {
+  margin-top: 10px;
+}
+.profile__picture img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  max-width: 100%;
+}
+.profile__icon {
+  color: rgb(116, 115, 115);
+  font-size: 30px;
+  margin-top: 10px;
+}
+/* Block for other page */
+.mainBlock__errorPage {
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 530px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  background: rgba(255, 255, 255, 0.75);
+  margin-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.mainBlock__resource {
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 530px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  background: rgba(255, 255, 255, 0.75);
+  margin-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.mainBlock__aboutme {
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 530px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  background: rgba(255, 255, 255, 0.75);
+  margin-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* hidden */
+@media screen and (max-width: 992px) {
+  #close {
+    display: none;
+  }
+}
+h1 {
+  font-family: "en";
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: inherit;
+}
+.grey:hover {
+  color: #999595;
+}
+.navMain {
+  font-size: 20px;
+  color: snow;
+}
+
+.navMain:hover {
+  font-size: 20px;
+  color: snow;
+}
+
+.navTitle:hover {
+  font-size: 20px;
+}
+.boldText {
+  font-weight: bold;
+}
+.body {
+  background-image: url("../images/cover.png");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "ch";
+  font-weight: bold;
+}
+.img {
+  padding-top: 10px;
+  border-radius: 30px;
+  width: 100%;
+}
+.textJP {
+  font-family: "851MkPOP";
+}
+.articleMain {
+  border: 5px dashed cornflowerblue;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.articleTitle {
+  font-weight: bold;
+}
+.grey {
+  color: #999595;
+  text-align: center;
+}
+.grey:hover {
+  color: #999595;
+}
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hidden.hidden {
+  display: none;
+}
+</style>
