@@ -34,11 +34,7 @@
   </div>
 </template>
 
-<style>
-::selection {
-  background-color: yellowgreen;
-  color: white;
-}
+<style scoped>
 /* Block for body */
 .headingBody {
   background: rgba(255, 255, 255, 0.85);

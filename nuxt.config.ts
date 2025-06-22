@@ -22,6 +22,7 @@ export default defineNuxtConfig({
         { src: "https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js", defer: true },
         { src: "https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js", defer: true },
         { src: "https://unpkg.com/cursor-effects@latest/dist/browser.js", defer: true },
+        { src: "https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js", tagPosition: "bodyClose" },
       ],
       link: [
         {
@@ -31,6 +32,7 @@ export default defineNuxtConfig({
         { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" },
         { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" },
         { rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons" },
+        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" },
       ],
     },
   },
