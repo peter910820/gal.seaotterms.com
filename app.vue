@@ -15,12 +15,12 @@ onMounted(() => {
   <NavBar />
   <div class="container">
     <div class="row main-row">
-      <div class="col s12 m12 l12 xl9">
+      <div class="col col-12 col-xl-9">
         <div class="row">
           <NuxtPage />
         </div>
       </div>
-      <div class="col s12 m12 l12 xl3 sidebar-block">
+      <div class="col col-12 col-xl-3 sidebar-block">
         <AnnouncementBlock />
         <ModeratorBlock />
         <!-- <SideBar /> -->
