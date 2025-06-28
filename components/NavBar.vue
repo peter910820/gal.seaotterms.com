@@ -6,23 +6,45 @@ onMounted(() => {
 </script>
 
 <template>
-  <nav class="nav navbar" style="background-color: rgba(0, 0, 0, 0.5)">
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">海獺的Galgame分享站</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/">首頁</a></li>
-        <li><a href="/">資源</a></li>
-        <li><a href="/">關於我</a></li>
-        <li><a href="/">新增文章</a></li>
-      </ul>
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Galgame交流站</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="offcanvas offcanvas-end text-bg-dark"
+        tabindex="-1"
+        id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Galgame交流站</h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">文章一覽</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </nav>
-
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="/">首頁</a></li>
-    <li><a href="/">資源</a></li>
-    <li><a href="/">關於我</a></li>
-    <li><a href="/">新增文章</a></li>
-  </ul>
 </template>

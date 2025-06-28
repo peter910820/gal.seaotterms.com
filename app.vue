@@ -12,18 +12,20 @@ onMounted(() => {
 </script>
 
 <template>
-  <NavBar />
-  <div class="container">
-    <div class="row main-row">
-      <div class="col col-12 col-xl-9">
-        <div class="row">
-          <NuxtPage />
+  <div class="main" data-bs-theme="dark">
+    <NavBar />
+    <div class="container">
+      <div class="row main-row">
+        <div class="col col-12 col-xl-9">
+          <div class="row">
+            <NuxtPage />
+          </div>
         </div>
-      </div>
-      <div class="col col-12 col-xl-3 sidebar-block">
-        <AnnouncementBlock />
-        <ModeratorBlock />
-        <!-- <SideBar /> -->
+        <div class="col col-12 col-xl-3 sidebar-block">
+          <AnnouncementBlock />
+          <ModeratorBlock />
+          <!-- <SideBar /> -->
+        </div>
       </div>
     </div>
   </div>
@@ -38,8 +40,15 @@ $selection-color: white;
   color: $selection-color;
 }
 
+.main {
+  background-color: #212529;
+  color: white;
+  min-height: 100vh;
+}
+
 .container {
   min-width: 922px;
+  padding-top: 56px;
   width: 95% !important;
 }
 
