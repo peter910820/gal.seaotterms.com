@@ -1,5 +1,11 @@
 <script setup lang="ts">
 declare const WOW: any;
+declare const bootstrap: any;
+
+function showModal() {
+  const modal = new bootstrap.Modal(document.getElementById("loginModal"));
+  modal.show();
+}
 
 onMounted(() => {
   // 檢查是否在客戶端環境
@@ -12,13 +18,26 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="main" data-bs-theme="dark">
-    <NavBar />
+  <div class="main dark-theme" data-bs-theme="dark">
+    <NavBar @open-login-modal="showModal" />
     <div class="container">
       <div class="row main-row">
         <div class="col col-12 col-xl-9">
           <div class="row">
             <NuxtPage />
+            <div class="modal fade" id="loginModal" aria-hidden="true" aria-labelledby="modalTitle" tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalTitle">登入</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <LoginModal />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col col-12 col-xl-3 sidebar-block">
@@ -34,20 +53,30 @@ onMounted(() => {
 </template>
 
 <style lang="scss">
+@use "sass:map";
+
+// selection
 $selection-bg-color: yellowgreen;
 $selection-color: white;
-
-$theme-dark-bg-color: #212529;
-$theme-dark-color: white;
 
 ::selection {
   background-color: $selection-bg-color;
   color: $selection-color;
 }
 
+@mixin generate-theme($mode) {
+  @each $key, $value in map.get($theme, $mode) {
+    --#{$key}: #{$value};
+  }
+}
+
+.dark-theme {
+  @include generate-theme(dark);
+}
+
 .main {
-  background-color: $theme-dark-bg-color;
-  color: $theme-dark-color;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   min-height: 100vh;
 }
 
@@ -63,12 +92,17 @@ $theme-dark-color: white;
   }
 }
 
+.page {
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+}
+
 .sidebar {
   max-width: 100%;
   height: 200px;
   max-height: 200px;
   min-height: 200px;
-  border: 2px solid white;
+  border: 2px solid var(--border-color);
   border-radius: 20px;
   padding: 10px;
   margin-bottom: 20px;

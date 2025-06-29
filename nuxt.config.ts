@@ -8,6 +8,15 @@ export default defineNuxtConfig({
     },
   },
   css: ["~/assets/css/global.css"],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@use "~/assets/scss/_theme.scss" as *;`,
+        },
+      },
+    },
+  },
   app: {
     head: {
       link: [
