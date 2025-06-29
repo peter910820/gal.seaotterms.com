@@ -22,9 +22,11 @@ onMounted(() => {
           </div>
         </div>
         <div class="col col-12 col-xl-3 sidebar-block">
-          <AnnouncementBlock />
-          <ModeratorBlock />
-          <!-- <SideBar /> -->
+          <div class="row">
+            <AnnouncementBlock />
+            <ModeratorBlock />
+            <!-- <SideBar /> -->
+          </div>
         </div>
       </div>
     </div>
@@ -32,17 +34,20 @@ onMounted(() => {
 </template>
 
 <style lang="scss">
-$selection-background-color: yellowgreen;
+$selection-bg-color: yellowgreen;
 $selection-color: white;
 
+$theme-dark-bg-color: #212529;
+$theme-dark-color: white;
+
 ::selection {
-  background-color: $selection-background-color;
+  background-color: $selection-bg-color;
   color: $selection-color;
 }
 
 .main {
-  background-color: #212529;
-  color: white;
+  background-color: $theme-dark-bg-color;
+  color: $theme-dark-color;
   min-height: 100vh;
 }
 

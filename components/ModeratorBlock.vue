@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar-moderator wow animate__rotateInDownRight">
+  <div class="col col-12 sidebar-moderator wow animate__rotateInDownRight">
     <!-- <img class="rounded-circle" src="https://fs.seaotterms.com/resource/image/ja_icon-milia-sd.png" alt="image" /> -->
     <h5 style="margin-top: 10px">SeaotterMS</h5>
     <span>一個Galgame玩家</span>
