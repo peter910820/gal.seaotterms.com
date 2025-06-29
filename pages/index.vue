@@ -1,5 +1,5 @@
 <template>
-  <div class="s4 article">
+  <div class="col col-12 article">
     <div class="article-image">
       <img src="https://fs.seaotterms.com/resource/image/ja_icon-milia-sd.png" />
     </div>
